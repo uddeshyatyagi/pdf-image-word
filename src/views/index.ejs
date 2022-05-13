@@ -57,9 +57,9 @@
                         </div>
                         <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                             <div class="buy_ticket">
-                               <!--  <input
+                                <!--  <input
                                     onclick='responsiveVoice.speak("Welcome , You can now try here one of the best Text recognition using an OCR for free to convert Images into text,PDF and even as audio output just like the way you are listening right now. Go Give it a try !");'
-                                    type='button' class="boxed-btn-white" value='🔊 Play' /> */--> 
+                                    type='button' class="boxed-btn-white" value='🔊 Play' /> */-->
                             </div>
                         </div>
                         <div class="col-12">
@@ -80,7 +80,7 @@
                 <div class="position_relv">
                     <h1 class="opcity_text d-none d-lg-block"> O C R &nbsp &nbsp</h1>
 
-                <!-- <input
+                    <!-- <input
                         onclick='responsiveVoice.speak ("Welcome, You can now try here one of the best Text recognition using an OCR for free to convert Images into text,PDF and even as audio output just like the way you are listening right now. Go Give it a try !");'
                         type='button' class="boxed-btn-white" value='🔊 Play' />-->
                     <div class="row">
@@ -88,18 +88,30 @@
                             <div class="title_text">
                                 <h3> Image<br>
                                     to Text <br>
-                                    </h3>
-                                    <br>
-                                    <br>
-<h4> <%= typeof msg != 'undefined' ? msg : '' %> </h4>
-                                    <br>
-                                    <br>
+                                </h3>
+                                <br>
+                                <br>
+                                <h4>
+                                    <%= typeof msg !='undefined' ? msg : '' %>
+                                </h4>
+                                <br>
+                                <br>
+                                <form id="frmUploader" action="/uploadtocloud" method="post">
+                                    <div class="row">
+                                        <input class="boxed-btn-white" type="file" name="pdf" multiple />
+
+                                        <input class="boxed-btn-white ml-5" type="submit" name="submit" id="btnSubmit"
+                                            value=" Upload " />
+                                    </div>
+                                </form>
+                                <br><br>
                                 <form id="frmUploader" enctype="multipart/form-data" action="/upload" method="post">
                                     <div class="row">
                                         <input class="boxed-btn-white" type="file" name="image" multiple />
 
                                         <input class="boxed-btn-white ml-5" type="submit" name="submit" id="btnSubmit"
-                                            value=" Run OCR " /></div>
+                                            value=" Run OCR " />
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -166,13 +178,10 @@
                             <img src="img/speakers/pic1.png" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                    <a href="https://www.facebook.com/"><i
-                                            class="fa fa-facebook-square"></i></a>
-                                    <a href="https://www.instagram.com/"><i
-                                            class="fa fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/"><i class="fa fa-facebook-square"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
                                     <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                                    <a href="https://www.linkedin.com/in/"><i
-                                            class="fa fa-linkedin"></i></a>
+                                    <a href="https://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
                                     <a href="https://github.com/"><i class="fa fa-github"></i></a>
 
 
@@ -192,10 +201,8 @@
                             <img src="img/speakers/pic1.png" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                    <a href="https://www.facebook.com/"><i
-                                            class="fa fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/"><i
-                                            class="fa fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
                                 </div>
                             </div>
@@ -212,10 +219,8 @@
                             <img src="img/speakers/pic5.jpg" height="250px" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                    <a href="https://www.facebook.com/"><i
-                                            class="fa fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/"><i
-                                            class="fa fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
                                 </div>
                             </div>
@@ -250,7 +255,7 @@
     </div>
     <!-- speakers_end-->
 
-    
+
 
 
     <!-- resister_book_start -->
@@ -266,7 +271,8 @@
                                 <input class="boxed-btn-white ml-auto " type="file" name="image" multiple />
 
                                 <input class="boxed-btn-white ml-auto" type="submit" name="submit" id="btnSubmit"
-                                    value=" Run OCR " /></div>
+                                    value=" Run OCR " />
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -424,21 +430,15 @@
 
 
 
-                                    <li><a target="_blank"
-                                            href="https://www.facebook.com/">Facebook</a> &nbsp &nbsp<a href="
-                                            https://www.facebook.com/"> <i
-                                            class="fa fa-facebook-square"></i></a></li>
+                                    <li><a target="_blank" href="https://www.facebook.com/">Facebook</a> &nbsp &nbsp<a
+                                            href="
+                                            https://www.facebook.com/"> <i class="fa fa-facebook-square"></i></a></li>
                                     <li><a target="_blank" href="https://twitter.com/">Twitter</a>&nbsp
-                                        &nbsp<a href="https://twitter.com/"><i
-                                                class="fa fa-twitter"></i></a></a></li>
-                                    <li><a target="_blank"
-                                            href="https://www.instagram.com/">Instagram</a>&nbsp &nbsp<a
-                                            href="https://www.instagram.com/"><i
-                                                class="fa fa-instagram"></i></li>
-                                    <li><a target="_blank"
-                                            href="https://www.linkedin.com/">Linkedin</a> &nbsp <a
-                                            href="https://www.linkedin.com/"><i
-                                                class="fa fa-linkedin"></i></a></li>
+                                        &nbsp<a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></a></li>
+                                    <li><a target="_blank" href="https://www.instagram.com/">Instagram</a>&nbsp &nbsp<a
+                                            href="https://www.instagram.com/"><i class="fa fa-instagram"></i></li>
+                                    <li><a target="_blank" href="https://www.linkedin.com/">Linkedin</a> &nbsp <a
+                                            href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
                                 </div>
                             </ul>
 
@@ -481,8 +481,7 @@
                             Copyright &copy;
                             <script>
                                 document.write(new Date().getFullYear());
-                            </script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i>
-                            by GROUP-50 
+                            </script> All rights reserved | Made by GROUP-50
 
                         </p>
                     </div>
